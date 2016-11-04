@@ -31,7 +31,7 @@ import string
 import hashlib
 
 def get_table(key):
-    m = hashlib.md5.new()
+    m = hashlib.md5()
     m.update(key)
     s = m.digest()
     (a, b) = struct.unpack('<QQ', s)
